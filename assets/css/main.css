@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -36,14 +35,6 @@
 .light-background {
   --background-color: #fffaf0;
   --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
 }
 
 /* Smooth scroll */
@@ -171,53 +162,6 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   background-color: var(--background-color);
-}
-
-.header .topbar {
-  background-color: var(--accent-color);
-  height: 40px;
-  padding: 0;
-  font-size: 14px;
-  transition: all 0.5s;
-}
-
-.header .topbar .contact-info i {
-  font-style: normal;
-  color: var(--contrast-color);
-}
-
-.header .topbar .contact-info i a,
-.header .topbar .contact-info i span {
-  padding-left: 5px;
-  color: var(--contrast-color);
-}
-
-@media (max-width: 575px) {
-  .header .topbar .contact-info i a,
-  .header .topbar .contact-info i span {
-    font-size: 13px;
-  }
-}
-
-.header .topbar .contact-info i a {
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.header .topbar .contact-info i a:hover {
-  color: var(--contrast-color);
-  text-decoration: underline;
-}
-
-.header .topbar .social-links a {
-  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
-  line-height: 0;
-  transition: 0.3s;
-  margin-left: 20px;
-}
-
-.header .topbar .social-links a:hover {
-  color: var(--contrast-color);
 }
 
 .header .branding {
@@ -655,6 +599,9 @@ h6 {
   padding-bottom: 25px;
   border-top: 1px solid
     color-mix(in srgb, var(--default-color), transparent 90%);
+}
+.footer .copyright strong {
+  color: var(--nav-dropdown-color);
 }
 
 .footer .copyright p {
@@ -1562,8 +1509,257 @@ section,
   transform: scale(1.1);
 }
 /*--------------------------------------------------------------
-# Starter Section Section
+# Our Team Section
 --------------------------------------------------------------*/
-/* .starter-section {
-  Add your styles here
-} */
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.professional-card {
+  background: var(--surface-color);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 2rem;
+  background-color: var(--background-color);
+  width: 100%;
+}
+
+.professional-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.professional-header {
+  display: flex;
+}
+
+.professional-photo {
+  width: 30%;
+  height: 30%;
+}
+
+.professional-info {
+  line-height: 2rem;
+}
+
+.professional-more-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+.professional-video video {
+  width: 20rem;
+  background: var(--surface-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.professional-links {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .professional-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .professional-photo {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .professional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .professional-more-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+  }
+
+  .professional-video video {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  .professional-card {
+    width: 100%;
+  }
+
+  .professional-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .professional-photo {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .professional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .professional-more-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+  }
+
+  .professional-video video {
+    margin-top: 1.5rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Treatments Section
+--------------------------------------------------------------*/
+.first-info {
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.first-info h3 {
+  text-align: center;
+}
+
+.first-info h6 {
+  text-align: center;
+}
+
+.first-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.first-info img {
+  width: 20%;
+  border-radius: 1.5rem;
+}
+
+.first-info-content ul,
+ol {
+  margin-right: 10vw;
+}
+
+.first-info-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button button {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  width: 30%;
+  background-color: var(--accent-color);
+  border: none;
+  transition: ease-in-out 0.3s;
+}
+
+.button a {
+  color: #fff;
+}
+
+.button button:hover {
+  background-color: var(--nav-hover-color);
+}
+
+@media (max-width: 768px) {
+  .first-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-info h3 {
+    text-align: center;
+  }
+
+  .first-info img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+/*--------------------------------------------------------------
+# Curriculum section
+--------------------------------------------------------------*/
+.curriculum {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.curriculum li {
+  margin-bottom: 1rem;
+}
+
+.curriculum h3 {
+  margin: 1.5rem 0;
+}
+
+.published-books {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
