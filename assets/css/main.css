@@ -1738,6 +1738,10 @@ ol {
   .reverse {
     flex-direction: column-reverse;
   }
+
+  .button button {
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1751,6 +1755,7 @@ ol {
 
 .curriculum li {
   margin-bottom: 1rem;
+  list-style-type: none;
 }
 
 .curriculum h3 {
@@ -1760,6 +1765,29 @@ ol {
 .published-books {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+}
+
+.book-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.published-books img {
+  width: 50%;
+  border-radius: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .published-books {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .published-books img {
+    width: 90vw;
+    margin-bottom: 1.5rem;
+  }
 }
