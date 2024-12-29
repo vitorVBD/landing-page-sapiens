@@ -1791,3 +1791,24 @@ ol {
     margin-bottom: 1.5rem;
   }
 }
+
+.published-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.published-articles h6 {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.published-articles li {
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
